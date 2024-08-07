@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/middleeast/static/css/main.48c18bf2.css",
+    "main.js": "/middleeast/static/js/main.c04e4deb.js",
+    "static/media/test.jpg": "/middleeast/static/media/test.6e77546e98bd0ac24ae2.jpg",
+    "index.html": "/middleeast/index.html",
+    "main.48c18bf2.css.map": "/middleeast/static/css/main.48c18bf2.css.map",
+    "main.c04e4deb.js.map": "/middleeast/static/js/main.c04e4deb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48c18bf2.css",
+    "static/js/main.c04e4deb.js"
+  ]
+}
