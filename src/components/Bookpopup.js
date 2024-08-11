@@ -6,13 +6,16 @@ import toast, {Toaster} from "react-hot-toast"
 import classes from "./bookpopup.module.css";
 
 const Bookpopup = props => {
-const today = new Date()
-const minimumDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate() + 1).padStart(2, '0')}`
-console.log(minimumDate)
+    const today = new Date()
+    const minimumDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate() + 1).padStart(2, '0')}`
+
+    const [disabled, setDisabled] = useState(false)
+
     // Initializing the register, handleSubmit function and errors object to controke the form 
     const {register, handleSubmit} = useForm()
 
     const formHandler = data => {
+        setDisabled(true)
         fetch("https://formspree.io/f/mkgwbbao", {
             method: "POST",
             body: JSON.stringify(data),
@@ -22,10 +25,13 @@ console.log(minimumDate)
         }).then(res => {
             if(res.ok){
                 toast.success("Sent")
-                props.hide()
+                setTimeout(() => {
+                    props.hide()
+                }, 2000)
             }else{
                 toast.error("Somthing went wrong please try again")
             }
+            setDisabled(false)
         })
     }
 
@@ -77,7 +83,7 @@ console.log(minimumDate)
             
                 <footer className={classes.book__form__footer}>
                     <Button secondary  onClick={props.hide}>cancel</Button>
-                    <Button secondary type="submit">send</Button>
+                    <Button secondary type="submit" disabled={disabled}>send</Button>
                 </footer>
             </form>
 
