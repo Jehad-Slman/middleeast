@@ -6,7 +6,7 @@ const Footer = props => {
     return(
         <footer className={classes.footer} id="contact">
             <h2>Contact Us</h2>
-            <form>
+            {/* <form>
                 <section>
                     <div>
                         <label>Full Name</label>
@@ -20,7 +20,7 @@ const Footer = props => {
                 <label>Description</label>
                 <textarea/>
                 <Button variant="primary">Submit</Button>
-            </form>
+            </form> */}
         </footer>
     )
 }

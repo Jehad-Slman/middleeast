@@ -1,0 +1,162 @@
+.backdrop{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(128, 128, 128, .5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: auto;
+}
+
+.book{
+    width: 50%;
+    height: 80vh;   
+    padding: 30px 50px;
+    position: fixed;
+    top: 100px;
+    left: 25%;
+    z-index: 15; 
+    background: #FFFFFF;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow-y: auto;
+}
+
+.book__header{
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.book__header > h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.book textarea{
+    resize: none;
+}
+
+.book__form{
+    width: 100%;
+}
+
+.book__form > section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.choices > div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 20px 0 5px;
+}
+
+.choices > div > input{
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-right: 5px;
+}
+
+.choices > div > label{
+    margin: 0;
+}
+
+.book__form > section > div{
+    width: 100%;
+    margin-right: 10px;
+}
+
+.book__form label,
+.book__form input:not([type= "checkbox"]),
+.book__form textarea{
+    display: block;
+    width: 100%;
+}
+
+.book__form label{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 15px;
+}
+
+.book__form input,
+.book__form textarea{
+    margin: 5px 0;
+    padding: 2px 5px;
+    background: #FFFFFF;
+    border: 0.5px solid #808080;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 6px; 
+}
+
+.book__form input{
+    height: 2rem;
+}
+
+.book__form input:focus,
+.book__form textarea:focus{
+    outline: none;
+    border: 1px solid var(--main_color);
+}
+
+
+.book__form__footer{
+    width: 100%;
+    padding: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book__form__footer > button{
+    margin: 0;
+    margin-left: 15px;
+}
+
+.error{
+    color: red;
+}
+
+.error_message{
+    color: red;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.input_error{
+    border: 1px solid red;
+}
+
+@media (max-width: 1300px) {
+    .book__form > section{
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-height:490px){
+    .book{
+        width: 70%;
+        top: 10vh;
+        left: 15%;
+        padding: 30px;
+    }
+}
+
+@media(max-width:500px){
+    .book{
+        width: 70%;
+        top: 10vh;
+        left: 15%;
+        padding: 30px;
+    }
+}

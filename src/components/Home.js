@@ -10,8 +10,8 @@ const Home = props => {
                     {/* <ExampleCarouselImage  /> */}
                     <img src={image}/>
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Welcome to The MiddleFeast !</h3>
+                    <p>Experience the magic of Middle Eastern cuisine with us. From corporate events to intimate gatherings, we're here to make every moment memorable. Join us on a culinary journey filled with tradition, innovation, and unforgettable flavors. Welcome, and let the feast begin!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>

@@ -29,3 +29,28 @@
 .aboutus > section > p{
     width: calc(100% - 350px);
 }
+
+@media (max-width: 992px) {
+    .aboutus > section > p{
+        width: calc(100% - 320px);
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutus > section{
+        flex-direction: column;
+    }
+
+    .aboutus > section > img{
+        margin: 0 auto 20px;
+    }
+    .aboutus > section > p{
+        width: 100%;
+        order: 2;
+    }
+
+    .aboutus > section:last-child > img{
+        order: 1;
+    }
+}
+
