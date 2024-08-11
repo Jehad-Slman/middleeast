@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from 'react-bootstrap/Button';
+import toast, {Toaster} from "react-hot-toast"
 
 import classes from "./bookpopup.module.css";
 
@@ -19,13 +20,18 @@ console.log(minimumDate)
                 "Content-Type": "application/json"
             }
         }).then(res => {
-            console.log("response", res)
-            return res.json()
-        }).then(data => console.log(data))
+            if(res.ok){
+                toast.success("Sent")
+                props.hide()
+            }else{
+                toast.error("Somthing went wrong please try again")
+            }
+        })
     }
 
     return(
         <Fragment>
+        <Toaster position="top-center" reverseOrder={false}/>
         <div onClick={props.hide} className={classes.backdrop}></div>
         <section className={classes.book}>
             <header className={classes.book__header}>
