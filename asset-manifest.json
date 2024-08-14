@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/middleeast/static/css/main.7195c1b0.css",
-    "main.js": "/middleeast/static/js/main.78e197e6.js",
+    "main.js": "/middleeast/static/js/main.11337c1c.js",
     "static/media/test.jpg": "/middleeast/static/media/test.6e77546e98bd0ac24ae2.jpg",
     "index.html": "/middleeast/index.html",
     "main.7195c1b0.css.map": "/middleeast/static/css/main.7195c1b0.css.map",
-    "main.78e197e6.js.map": "/middleeast/static/js/main.78e197e6.js.map"
+    "main.11337c1c.js.map": "/middleeast/static/js/main.11337c1c.js.map"
   },
   "entrypoints": [
     "static/css/main.7195c1b0.css",
-    "static/js/main.78e197e6.js"
+    "static/js/main.11337c1c.js"
   ]
 }
