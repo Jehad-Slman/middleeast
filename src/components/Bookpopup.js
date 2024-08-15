@@ -12,13 +12,28 @@ const Bookpopup = props => {
     const [disabled, setDisabled] = useState(false)
 
     // Initializing the register, handleSubmit function and errors object to controke the form 
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, watch} = useForm({
+        defaultValues:{
+            typeOfService: props.type
+        }
+    })
 
     const formHandler = data => {
+        const dataToSend = {
+            typeOfService: data.typeOfService,
+            name: data.name,
+            email: data.email,
+            numberOfPoeple: data.numberOfPoeple,
+            date: data.date,
+            allergies: data.allergies,
+            comments: data.comments,
+            checks: `${data.vegetarian ? "vegetarian, " : ""}${data.vegan ? "vegan, " : ""}${data.omnivore ? "omnivore" : ""}`
+        }
+
         setDisabled(true)
         fetch("https://formspree.io/f/xanwjrve", {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(dataToSend),
             headers: {
                 "Content-Type": "application/json"
             }
@@ -48,15 +63,21 @@ const Bookpopup = props => {
                 <section>
                     <div>
                         <label>Name</label>
-                        <input type="text" {...register("name")}/>
+                        <input type="text" {...register("name")} required/>
                     </div>
                     <div>
+                        <label>Email</label>
+                        <input type="email" {...register("email")} required/>
+                    </div>
+                </section>
+                <section>
+                    <div>
                         <label>Number Of Poeple</label>
-                        <input type="number" {...register("numberOfPoeple")} min={(props.type == "Home Party Platters" || props.type == "Private Dining Experiences") ? 6 : 10}/>
+                        <input type="number" {...register("numberOfPoeple")} min={(props.type == "Home Party Platters" || props.type == "Private Dining Experiences") ? 6 : 10} required/>
                     </div>
                     <div>
                         <label>Date</label>
-                        <input type="date" {...register("date")} min={`${minimumDate}`}/>
+                        <input type="date" {...register("date")} min={`${minimumDate}`}required/>
                     </div>
                 </section>
                 

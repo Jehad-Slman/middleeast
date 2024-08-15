@@ -1,18 +1,35 @@
-import classes from "./aboutus.module.css"
+import classes from "./aboutus.module.css";
+
+const screenWidth = window.innerWidth > 600
 
 const Aboutus = props => {
     return(
         <section className={classes.aboutus} id="aboutus">
             <h2>About Us</h2>
+            {screenWidth && 
+            <>
             <section>
                 <img src="https://placehold.co/300x250"/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Trayan and Osama! We discovered our passion for cooking from a young age. Guided by our grandparents and influenced by the seasons, we mastered the art of Middle Eastern cuisine.<br/>Our journey took us from the Syrian sea side to the Czech Republic, where we now share our love for authentic flavours with the world through our catering business.</p>
             </section>
 
             <section>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Today, as partners in business, we blend tradition with innovation in every dish we create, connecting people through shared experiences and bringing a taste of our homeland to tables around the globe.<br/>Join us on this flavorful adventure, where every bite is a journey back to our roots and a celebration of Middle Eastern cuisine. From the mountains of Syria to the hearts of food lovers everywhere, let us take you on a culinary voyage unlike any other. Bon appétit!</p>
                 <img src="https://placehold.co/300x250"/>
             </section>
+            </>}
+            
+            {!screenWidth && 
+            <>
+            <section>
+                <img src="https://placehold.co/300x250"/>
+                <img src="https://placehold.co/300x250"/>
+            </section>
+            <section>
+                <p>Trayan and Osama! We discovered our passion for cooking from a young age. Guided by our grandparents and influenced by the seasons, we mastered the art of Middle Eastern cuisine.<br/>Our journey took us from the Syrian sea side to the Czech Republic, where we now share our love for authentic flavours with the world through our catering business.</p>
+                <p>Today, as partners in business, we blend tradition with innovation in every dish we create, connecting people through shared experiences and bringing a taste of our homeland to tables around the globe.<br/>Join us on this flavorful adventure, where every bite is a journey back to our roots and a celebration of Middle Eastern cuisine. From the mountains of Syria to the hearts of food lovers everywhere, let us take you on a culinary voyage unlike any other. Bon appétit!</p>
+            </section>
+            </>}
         </section>
     )
 }

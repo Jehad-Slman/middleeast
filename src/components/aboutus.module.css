@@ -24,6 +24,7 @@
     height: 250px;
     border-radius: 5px;
     display: block;
+    object-fit: cover;
 }
 
 .aboutus > section > p{
@@ -31,26 +32,35 @@
 }
 
 @media (max-width: 992px) {
+    .aboutus > section > img{
+        width: 200px;
+        height: 150px;
+    }
     .aboutus > section > p{
-        width: calc(100% - 320px);
+        width: calc(100% - 210px);
     }
 }
 
 @media (max-width: 600px) {
-    .aboutus > section{
-        flex-direction: column;
-    }
 
     .aboutus > section > img{
-        margin: 0 auto 20px;
-    }
-    .aboutus > section > p{
-        width: 100%;
-        order: 2;
+        width: 150px;
+        height: 150px;
     }
 
-    .aboutus > section:last-child > img{
-        order: 1;
+    .aboutus > section:last-child{
+        display: block;
+    }
+
+    .aboutus > section:last-child > p{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .aboutus > section > img{
+        width: 100px;
+        height: 100px;
     }
 }
 

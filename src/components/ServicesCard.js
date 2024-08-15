@@ -20,7 +20,7 @@ const ServicesCard = props => {
         {showPopup && <Bookpopup hide={() => setShowPopup(false)} type={serviceType}/>}
         <section className={classes.service_card}>
             <Card style={{ width: '100%' }}>
-                <Card.Img variant="top" src="https://placehold.co/100x80" />
+                <Card.Img variant="top" src={props.image} />
                 <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>
