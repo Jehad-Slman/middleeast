@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/middleeast/static/css/main.7195c1b0.css",
-    "main.js": "/middleeast/static/js/main.11337c1c.js",
-    "static/media/test.jpg": "/middleeast/static/media/test.6e77546e98bd0ac24ae2.jpg",
+    "main.css": "/middleeast/static/css/main.ef277e05.css",
+    "main.js": "/middleeast/static/js/main.294628b5.js",
+    "static/media/slide3.jpg": "/middleeast/static/media/slide3.3ab83d620c79134be22a.jpg",
+    "static/media/slide1.jpg": "/middleeast/static/media/slide1.28079256efa50843c8e8.jpg",
+    "static/media/slide2.jpg": "/middleeast/static/media/slide2.cf43fbd6e824ab074f94.jpg",
+    "static/media/service2.jpeg": "/middleeast/static/media/service2.532d3246b77d093b9c6b.jpeg",
+    "static/media/service3.jpeg": "/middleeast/static/media/service3.15765c52c494a59f48de.jpeg",
+    "static/media/service4.jpeg": "/middleeast/static/media/service4.653faa98fba768aa97ed.jpeg",
+    "static/media/service1.jpeg": "/middleeast/static/media/service1.5b34eae2d965b31a851c.jpeg",
     "index.html": "/middleeast/index.html",
-    "main.7195c1b0.css.map": "/middleeast/static/css/main.7195c1b0.css.map",
-    "main.11337c1c.js.map": "/middleeast/static/js/main.11337c1c.js.map"
+    "main.ef277e05.css.map": "/middleeast/static/css/main.ef277e05.css.map",
+    "main.294628b5.js.map": "/middleeast/static/js/main.294628b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.7195c1b0.css",
-    "static/js/main.11337c1c.js"
+    "static/css/main.ef277e05.css",
+    "static/js/main.294628b5.js"
   ]
 }
